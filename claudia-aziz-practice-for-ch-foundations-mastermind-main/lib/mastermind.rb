@@ -15,7 +15,6 @@ class Mastermind
     user_guess = Code.from_string(gets.chomp)
     puts @secret_code.num_exact_matches(user_guess) 
     puts @secret_code.num_near_matches(user_guess) 
-    return true if user_guess.pegs == @secret_code.pegs
-    false
+    user_guess == @secret_code
   end
 end

@@ -16,9 +16,7 @@ class Code
   def self.random(length)
     random = POSSIBLE_PEGS.keys
     pegs = []
-    while pegs.length < length
-      pegs << random.sample
-    end
+    length.times { pegs << random.sample }
     Code.new(pegs)
   end
 
